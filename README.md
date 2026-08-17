@@ -1,2 +1,0 @@
-# Jewels
-Jewellery store
