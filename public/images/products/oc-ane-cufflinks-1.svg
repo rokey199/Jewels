@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="42%" r="75%">
+      <stop offset="0%" stop-color="#FBF7EF"/>
+      <stop offset="55%" stop-color="#F5EDDE"/>
+      <stop offset="100%" stop-color="#EADFC9"/>
+    </radialGradient>
+    <radialGradient id="vignette" cx="50%" cy="50%" r="70%">
+      <stop offset="60%" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#6B5A3E" stop-opacity="0.14"/>
+    </radialGradient>
+    <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="14" result="blur"/>
+      <feOffset dx="0" dy="18"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.22"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="gemGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="grain" width="120" height="120" patternUnits="userSpaceOnUse">
+      <circle cx="12" cy="18" r="0.6" fill="#000000" opacity="0.02"/>
+      <circle cx="70" cy="52" r="0.5" fill="#000000" opacity="0.02"/>
+      <circle cx="40" cy="96" r="0.7" fill="#000000" opacity="0.015"/>
+      <circle cx="104" cy="30" r="0.5" fill="#ffffff" opacity="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="800" fill="url(#bg)"/>
+  <rect width="800" height="800" fill="url(#grain)"/>
+  <rect width="800" height="800" fill="url(#vignette)"/>
+  <rect x="14" y="14" width="772" height="772" fill="none" stroke="#B99B63" stroke-opacity="0.5" stroke-width="1.5"/>
+  <rect x="22" y="22" width="756" height="756" fill="none" stroke="#C6A664" stroke-opacity="0.28" stroke-width="1"/><linearGradient id="metal-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+    <stop offset="0%" stop-color="#F0DFB4"/>
+    <stop offset="45%" stop-color="#C9A55C"/>
+    <stop offset="100%" stop-color="#9A7740"/>
+  </linearGradient><radialGradient id="gem-Onyx" cx="35%" cy="30%" r="90%">
+    <stop offset="0%" stop-color="#5A5A5A"/>
+    <stop offset="55%" stop-color="#2A2A2A"/>
+    <stop offset="100%" stop-color="#141414"/>
+  </radialGradient>
+      <g filter="url(#soft)">
+        <path d="M 400 140 C 530 272, 530 340, 400 380" fill="none" stroke="#C9A55C" stroke-width="2.5" stroke-dasharray="0.1 9" stroke-linecap="round"/>
+    <path d="M 400 140 C 530 272, 530 340, 400 380" fill="none" stroke="#F0DFB4" stroke-width="1.2" stroke-dasharray="0.1 9" stroke-linecap="round"/>
+        <circle cx="400" cy="470" r="16" fill="none" stroke="#C9A55C" stroke-width="5"/>
+        <ellipse cx="400" cy="560" rx="92" ry="128" fill="url(#metal-gold)"/>
+        <ellipse cx="400" cy="560" rx="92" ry="128" fill="none" stroke="#9A7740" stroke-width="2.5" opacity="0.55"/>
+        <path d="M 400 508 C 483.2 534, 483.2 586, 400 612 C 316.8 586, 316.8 534, 400 508 Z" fill="#2A2A2A" filter="url(#gemGlow)"/>
+      <path d="M 400 508 C 483.2 534, 483.2 586, 400 612 C 316.8 586, 316.8 534, 400 508 Z" fill="url(#gem-Onyx)"/>
+      <path d="M 379.2 536.6 L 405.2 560 L 379.2 583.4 Z" fill="#ffffff" opacity="0.75"/>
+        <path d="M 352 548 L 448 548 L 400 452 Z" fill="#F0DFB4" opacity="0.7"/>
+      </g></svg>
